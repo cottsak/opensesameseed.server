@@ -12,6 +12,12 @@ namespace Seed.Web
     {
         public void Configuration(IAppBuilder app)
         {
+#if DEBUG
+            app.UseForcedHttps(44300);  // IIS Express
+#else
+            app.UseForcedHttps(443);
+#endif
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

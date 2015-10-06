@@ -1,0 +1,9 @@
+*.suo
+*.user
+*/bin
+*/obj
+/packages
+*.ncrunchproject
+/*.ncrunchsolution
+*_NCrunch*
+/.vs/config/applicationhost.config
